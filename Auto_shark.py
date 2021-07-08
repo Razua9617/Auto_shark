@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # CODE FOR AUTO SHARK
 
 def intro():

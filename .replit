@@ -1,2 +1,2 @@
 language = "python3"
-run = "Auto_shark"
+run = "/home/runner/Autoshark/Auto_shark.py"
