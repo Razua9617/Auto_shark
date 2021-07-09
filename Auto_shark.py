@@ -2,11 +2,7 @@
 # CODE FOR AUTO SHARK
 
 #import time
-#import sys
-#import pyshark
-#import re
-#import dpkt
-#import socket
+
 
 def colored(r, g, b, tevaluet):
     return "\033[38;2;{};{};{}m{} \033[38;2;255;255;255m".format(r, g, b, tevaluet)
