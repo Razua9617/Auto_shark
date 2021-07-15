@@ -1,7 +1,20 @@
+"""
+Contributer 1:
+Contributer 2:
+School: Fullstack Academy Here
+Date:
+Project Name:
+Tools Used For This Project:
+
+Summary of this Option:
+"""
+
 #!/usr/bin/python3
 # CODE FOR AUTO SHARK
 
-from extract import *
+from First_Option import *
+from Second_Option import *
+from THird Option import *
 
 def colored(r, g, b, text):
     return "\033[38;2;{};{};{}m{} \033[38;2;255;255;255m".format(r, g, b, text)
@@ -29,18 +42,17 @@ def greet():
 # This function will only print the menu | DONE
 def menu():
     print("""\nPlease select from the following options:
-	1-Extract IP:
-	2-images, smtp, binary files
-	3-errors
-	4-indicators of compromise
-	5-All the above
+	1- Extract IP:
+	2- All Type of File(s)
+	3- Indicators of Compromise
+	4- Smart Scan
 	""")
 
 
 # Use this function to prompt a user to ask what option they want to choose
 def get_choice():
     # Use this list for validaton
-    option = ['1', '2', '3', '4', '5']
+    option = ['1', '2', '3', '4']
 
     while True:
         choice = input("Choice: ")
@@ -102,8 +114,8 @@ def loop():
 
         # x = done(start)
         elif value == '2':
-            print("You chose to extract image, smtp,and binary files")
-            # files()
+            print("You chose to extract all type of file(s)")
+            extractfiles()
             # prompt the user to see if they would like to do something else
             prompt = prompt_again()
             if prompt == 'y':
@@ -112,9 +124,10 @@ def loop():
                 bye()
                 break
 
+
         elif value == '3':
-            print("You chose to extract any error messages")
-            # errors()
+            print("You chose to display indicators of compromise(IOC)")
+            runit()
             # prompt the user to see if they would like to do something else
             prompt = prompt_again()
             if prompt == 'y':
@@ -124,8 +137,10 @@ def loop():
                 break
 
         elif value == '4':
-            print("You chose to extract any Indicators of Compromise(IOC)")
-            # ioc()
+            print("You chose to do a smart scan")
+            get_all_ip()
+            extractfiles()
+            runit()
             # prompt the user to see if they would like to do something else
             prompt = prompt_again()
             if prompt == 'y':
@@ -133,24 +148,7 @@ def loop():
             else:
                 bye()
                 break
-
-        elif value == '5':
-            print("You chose option 5")
-            # all()
-            # prompt the user to see if they would like to do something else
-            prompt = prompt_again()
-            if prompt == 'y':
-                continue
-            else:
-                bye()
-                break
-
-
 
 intro()
 greet()
 loop()
-#num_of_packets()
-
-## we call intro(), greet(), then loop()
-# time.sleep(5) #We can turn this on when we finish the program
