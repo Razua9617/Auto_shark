@@ -1,4 +1,4 @@
-import pyshark
+
 from scapy.all import *
 import re
 import sys
@@ -162,6 +162,12 @@ def everything_from_source():
                 print("\t> TCP PORT(s):", end=' ')
                 if v2 == []:
                     print('No port on this protocol')
+                elif len(v2) > 5:
+                    i = 0
+                    while i < 5:
+                        print(v2[i], end= ' ')
+                        i += 1
+                    print()
                 else:
                     for tport in v2:
                         print(tport, end=' ')
@@ -170,6 +176,12 @@ def everything_from_source():
                 print("\t> UDP PORT(s):", end=' ')
                 if v2 == []:
                     print('No port on this protocol')
+                elif len(v2) > 5:
+                    i = 0
+                    while i < 5:
+                        print(v2[i], end= ' ')
+                        i += 1
+                    print()
                 else:
                     for uport in v2:
                         print(uport, end=' ')
@@ -199,6 +211,12 @@ def everything_from_destination():
                 print("\t> TCP PORT(s):", end=' ')
                 if v2 == []:
                     print('No port on this protocol')
+                elif len(v2) > 5:
+                    i = 0
+                    while i < 5:
+                        print(v2[i], end= ' ')
+                        i += 1
+                    print()
                 else:
                     for tport in v2:
                         print(tport, end=' ')
@@ -207,6 +225,12 @@ def everything_from_destination():
                 print("\t> UDP PORT(s):", end=' ')
                 if v2 == []:
                     print('No port on this protocol')
+                elif len(v2) > 5:
+                    i = 0
+                    while i < 5:
+                        print(v2[i], end= ' ')
+                        i += 1
+                    print()
                 else:
                     for uport in v2:
                         print(uport, end=' ')
